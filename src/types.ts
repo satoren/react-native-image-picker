@@ -8,6 +8,7 @@ export interface ImageLibraryOptions {
   quality?: PhotoQuality;
   videoQuality?: AndroidVideoOptions | iOSVideoOptions;
   includeBase64?: boolean;
+  requireType?: ImageRequireType;
 }
 
 export interface CameraOptions
@@ -49,6 +50,7 @@ export type PhotoQuality =
   | 1;
 export type CameraType = 'back' | 'front';
 export type MediaType = 'photo' | 'video' | 'mixed';
+export type ImageRequireType = 'jpg' | 'png';
 export type AndroidVideoOptions = 'low' | 'high';
 export type iOSVideoOptions = 'low' | 'medium' | 'high';
 export type ErrorCode = 'camera_unavailable' | 'permission' | 'others';

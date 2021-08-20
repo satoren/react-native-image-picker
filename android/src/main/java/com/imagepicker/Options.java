@@ -14,12 +14,14 @@ public class Options {
     int durationLimit;
     Boolean useFrontCamera = false;
     String mediaType;
+    String requireType;
 
 
     Options(ReadableMap options) {
         mediaType = options.getString("mediaType");
         selectionLimit = options.getInt("selectionLimit");
         includeBase64 = options.getBoolean("includeBase64");
+        requireType = options.getString("requireType");
 
         String videoQualityString = options.getString("videoQuality");
         if(!TextUtils.isEmpty(videoQualityString) && !videoQualityString.toLowerCase().equals("high")) {
@@ -35,5 +37,13 @@ public class Options {
         maxWidth = options.getInt("maxWidth");
         saveToPhotos = options.getBoolean("saveToPhotos");
         durationLimit = options.getInt("durationLimit");
+    }
+
+    public String requireMimeTypeOr(String defaultType) {
+        if (requireType != null) {
+            return "image/" + requireType;
+        } else {
+            return defaultType;
+        }
     }
 }

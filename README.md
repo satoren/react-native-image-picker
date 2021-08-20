@@ -81,6 +81,7 @@ The `callback` will be called with a response object, refer to [The Response Obj
 | maxWidth      | OK  | OK      | To resize the image                                                                                   |
 | maxHeight     | OK  | OK      | To resize the image                                                                                   |
 | videoQuality  | OK  | OK      | 'low', 'medium', or 'high' on iOS, 'low' or 'high' on Android                                         |
+| requireType   | OK  | OK      | 'jpg' or 'png'. Convert the image type                                                      　　　　　　|
 | durationLimit | OK  | OK      | Video max duration in seconds                                                                         |
 | quality       | OK  | OK      | 0 to 1, photos                                                                                        |
 | cameraType    | OK  | OK      | 'back' or 'front'. May not be supported in few android devices                                        |
